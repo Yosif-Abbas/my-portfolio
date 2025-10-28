@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #3a1830;
+  --foreground: #edd4e6;
+  --font-heading: var(--font-oswald);
+  --font-body: var(--font-geist-sans);
+}
+
+@theme {
+  --breakpoint-xs: 20rem;
+  /* --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem; */
+}
+
+body {
+  background: var(--background);
+  background: url('/noise.png'), radial-gradient(circle, #562446 0%, #481e3b 44%, #3a1830 88%);
+  background-blend-mode: overlay;
+  color: var(--foreground);
+}
+
+@utility card {
+  @apply p-2;
+}
+
+@utility desc-before {
+  @apply absolute left-0 top-1 bottom-1 w-[1px] bg-[var(--foreground)] opacity-25;
+}
