@@ -32,17 +32,7 @@
       "name": "Natours",
       "slug": "natours-backend",
       "description": "A comprehensive, production-ready tourism booking API. This application is provided with security.",
-      "tech": [
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Mongoose",
-        "Redis",
-        "Stripe",
-        "TypeScript",
-        "JWT",
-        "Swagger"
-      ],
+      "tech": ["Node.js", "Express", "MongoDB", "Mongoose", "Stripe", "TypeScript", "JWT"],
       "githubLink": "https://github.com/Yosif-Abbas/natours-backend",
       "logo": "/natours.png"
     }
