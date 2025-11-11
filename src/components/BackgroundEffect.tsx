@@ -14,7 +14,6 @@ export default function BackgroundEffectWrapper({ children }: { children: React.
         className="fixed inset-0 -z-10 md:z-10 overflow-hidden pointer-events-none"
         style={{
           background: `
-            url('/noise.png'),
             radial-gradient(circle at ${pos.x}px ${pos.y}px, rgba(255,255,255,0.04) 0%, rgba(0,0,0,0.02) 10%)
           `,
           backgroundBlendMode: 'overlay',

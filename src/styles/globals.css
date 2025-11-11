@@ -17,8 +17,8 @@
 
 body {
   background: var(--background);
-  /* background: url('/noise.png'), radial-gradient(circle, #562446 0%, #481e3b 44%, #3a1830 88%);
-  background-blend-mode: overlay; */
+  background: url('/noise.png'), radial-gradient(circle, #562446 0%, #481e3b 44%, #3a1830 88%);
+  background-blend-mode: overlay;
   color: var(--foreground);
 }
 
