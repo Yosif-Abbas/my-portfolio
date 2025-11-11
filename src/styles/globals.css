@@ -1,7 +1,9 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #3a1830;
+  /* --background: #3a1830; */
+  --background: #562446;
+
   --foreground: #edd4e6;
   --font-heading: var(--font-oswald);
   --font-body: var(--font-geist-sans);
@@ -15,15 +17,19 @@
 
 body {
   background: var(--background);
-  background: url('/noise.png'), radial-gradient(circle, #562446 0%, #481e3b 44%, #3a1830 88%);
-  background-blend-mode: overlay;
+  /* background: url('/noise.png'), radial-gradient(circle, #562446 0%, #481e3b 44%, #3a1830 88%);
+  background-blend-mode: overlay; */
   color: var(--foreground);
 }
 
 @utility card {
-  @apply p-2;
+  @apply p-2 space-y-1 hover:bg-black/10 transition-colors duration-150 overflow-hidden;
 }
 
 @utility desc-before {
   @apply absolute left-0 top-1 bottom-1 w-[1px] bg-[var(--foreground)] opacity-25;
+}
+
+@utility fisheye-zoom {
+  @apply transition-all duration-300 ease-in-out hover:scale-110 hover:rounded-[15px];
 }
