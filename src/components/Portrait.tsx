@@ -33,11 +33,11 @@ export default function Portrait() {
         className="aspect-square md:w-[190px] md:h-[190px]  object-cover rounded-md z-5 absolute top-1/2 left-1/2 -translate-1/2 [mask-image:radial-gradient(circle,white_70%,transparent_100%)]"
         alt="Youssef"
         custom={pos}
-        animate={{
-          rotateY: pos.y / -8,
-          rotateX: pos.x / 8,
-        }}
-        transition={{ type: 'spring', stiffness: 200, damping: 18 }}
+        // animate={{
+        //   rotateX: pos.y / -2,
+        //   rotateY: pos.x / 2,
+        // }}
+        // transition={{ type: 'spring', stiffness: 200, damping: 18 }}
       />
       <Image
         src="/image.png"
