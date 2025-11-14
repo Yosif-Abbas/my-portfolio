@@ -27,13 +27,22 @@
       "githubLink": "https://github.com/Yosif-Abbas/the-wild-oasis-website",
       "logo": "/the-wild-oasis-website.png"
     },
-
     {
       "name": "Natours",
       "slug": "natours-backend",
       "description": "A comprehensive, production-ready tourism booking API. This application is provided with security.",
-      "tech": ["Node.js", "Express", "MongoDB", "Mongoose", "Stripe", "TypeScript", "JWT"],
+      "tech": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Mongoose",
+        "Stripe",
+        "TypeScript",
+        "JWT",
+        "Swagger"
+      ],
       "githubLink": "https://github.com/Yosif-Abbas/natours-backend",
+      "link": "https://natours-backend-two.vercel.app/api-docs/",
       "logo": "/natours.png"
     }
   ]
