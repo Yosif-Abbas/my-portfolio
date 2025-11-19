@@ -40,7 +40,7 @@ function Project({ project, index }: { project: Project; index: number }) {
       </p>
       <div className="flex gap-1 flex-wrap w-full">
         {project.tech.map((el) => (
-          <TechTag key={el} tag={el} />
+          <TechTag key={`${project.slug}_${el}`} tag={el} />
         ))}
       </div>
 

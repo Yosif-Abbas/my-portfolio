@@ -3,6 +3,7 @@
 :root {
   /* --background: #3a1830; */
   --background: #562446;
+  /* --background: #eeeeee; */
 
   --foreground: #edd4e6;
   --font-heading: var(--font-oswald);

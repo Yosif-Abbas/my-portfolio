@@ -30,16 +30,19 @@
     {
       "name": "Natours",
       "slug": "natours-backend",
-      "description": "A comprehensive, production-ready tourism booking API. This application is provided with security.",
+      "description": "This API powers a complete tour booking platform, built with a focus on security, reliability, and real-world production standards. It includes user authentication with role-based access, payment handling, and a management system for tours and reviews. The system is protected against common web vulnerabilities. It also provides fully documented endpoints.",
       "tech": [
+        "TypeScript",
         "Node.js",
         "Express",
         "MongoDB",
         "Mongoose",
         "Stripe",
-        "TypeScript",
         "JWT",
-        "Swagger"
+        "Swagger",
+        "Sharp",
+        "Joi",
+        "Nodemailer"
       ],
       "githubLink": "https://github.com/Yosif-Abbas/natours-backend",
       "link": "https://natours-backend-two.vercel.app/api-docs/",

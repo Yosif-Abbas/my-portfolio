@@ -10,6 +10,7 @@ export default function ProjectTitle({ project }: { project: Project }) {
   return (
     <motion.h1
       className={`text-xl tracking-wide uppercase flex items-center gap-x-2 w-fit`}
+      title={project.slug}
       initial={project.link ? { translateX: -30 } : {}}
       onHoverStart={() => arrowControls.start({ translateX: 0 })}
       onHoverEnd={() => arrowControls.start({ translateX: -30 })}

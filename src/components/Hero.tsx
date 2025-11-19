@@ -14,7 +14,7 @@ export default function Hero() {
       >
         Youssef Abbas
       </motion.h1>
-      <motion.p
+      {/* <motion.p
         initial={{ translateY: 15, opacity: 0 }}
         animate={{
           translateY: 0,
@@ -25,7 +25,7 @@ export default function Hero() {
       >
         Full-stack Web Developer,{' '}
         <span className="text-xs md:text-base font-light">Graduated in 2025</span>.
-      </motion.p>
+      </motion.p> */}
     </div>
   );
 }

@@ -14,7 +14,16 @@ export default function About() {
         About
       </motion.h2>
       <motion.p
-        className="relative pl-4 before:desc-before text-sm leading-relaxed tracking-wide md:text-base"
+        className="relative pl-2 before:desc-before text-sm leading-relaxed tracking-wide md:text-base"
+        initial={{ opacity: 0, translateY: 25 }}
+        whileInView={{ opacity: 1, translateY: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
+        graduated in 2025, with a bachelor&apos;s degree in Computer Science
+      </motion.p>
+      <motion.p
+        className="relative pl-2 before:desc-before text-sm leading-relaxed tracking-wide md:text-base"
         initial={{ opacity: 0, translateY: 25 }}
         whileInView={{ opacity: 1, translateY: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
