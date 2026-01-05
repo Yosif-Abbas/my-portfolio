@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-export default function About() {
+export default function About2() {
   return (
     <div className="py-2 px-4 flex flex-col">
       <motion.h2

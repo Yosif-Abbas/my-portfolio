@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Roboto_Condensed } from 'next/font/google';
 import '../styles/globals.css';
+import NavBar from '@/components/layout/NavBar';
 
 const robotoCondensed = Roboto_Condensed({
   subsets: ['latin'],
@@ -13,7 +14,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${robotoCondensed.className} antialiased min-h-screen`}>{children}</body>
+      <body className={`${robotoCondensed.className} antialiased min-h-screen`}>
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }
