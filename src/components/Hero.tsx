@@ -14,18 +14,6 @@ export default function Hero() {
       >
         Youssef Abbas
       </motion.h1>
-      {/* <motion.p
-        initial={{ translateY: 15, opacity: 0 }}
-        animate={{
-          translateY: 0,
-          opacity: 1,
-          transition: { duration: 0.25, delay: 0.2 },
-        }}
-        className="tracking-wide md:text-lg"
-      >
-        Full-stack Web Developer,{' '}
-        <span className="text-xs md:text-base font-light">Graduated in 2025</span>.
-      </motion.p> */}
     </div>
   );
 }

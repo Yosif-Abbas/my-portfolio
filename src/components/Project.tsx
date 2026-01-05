@@ -6,18 +6,10 @@ import Link from 'next/link';
 import { motion } from 'motion/react';
 
 import ProjectTitle from './ProjectTitle';
-import TypingText from './TypingText';
-
-// {
-//   "name": "The Wild Oasis",
-//   "slug": "the-wild-oasis",
-//   "description": "A modern hotel management dashboard. It allows hotel staff to manage bookings, guests, and cabins efficiently through an intuitive interface. It includes features like authentication, filtering, sorting, and data visualization.",
-//   "tech": ["React", "React Query", "styled-components", "Supabase"],
-//   "link": "https://the-wild-oasis-alpha-lovat.vercel.app",
-//   "githubLink": "https://github.com/Yosif-Abbas/the-wild-oasis"
-// }
 
 function Project({ project, index }: { project: Project; index: number }) {
+  const projectDescriptions = project.description.split('\n');
+
   return (
     <motion.div
       initial={{ opacity: 0, translateY: 25 }}
@@ -35,9 +27,20 @@ function Project({ project, index }: { project: Project; index: number }) {
         className="relative pl-3 before:desc-before leading-relaxed text-sm md:text-base lg:text-lg"
         wpm={1000}
       /> */}
-      <p className="relative pl-3 before:desc-before leading-relaxed text-sm md:text-base lg:text-lg">
+
+      {/* <p className="relative pl-3 before:desc-before leading-relaxed text-sm md:text-base lg:text-lg">
         {project.description}
-      </p>
+      </p> */}
+
+      {projectDescriptions.map((description, i) => (
+        <p
+          className="relative pl-3 before:desc-before leading-relaxed text-sm md:text-base lg:text-lg"
+          key={`${project.slug}-${i}`}
+        >
+          {description}
+        </p>
+      ))}
+
       <div className="flex gap-1 flex-wrap w-full">
         {project.tech.map((el) => (
           <TechTag key={`${project.slug}_${el}`} tag={el} />

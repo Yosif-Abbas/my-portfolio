@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function About() {
   return (
-    <div className="p-2 flex flex-col gap-y-4">
+    <div className="py-2 px-4 flex flex-col">
       <motion.h2
         className="text-xl font-semibold uppercase tracking-wide md:hidden"
         initial={{ opacity: 0, translateX: -25 }}
@@ -13,26 +13,42 @@ export default function About() {
       >
         About
       </motion.h2>
+
       <motion.p
-        className="relative pl-2 before:desc-before text-sm leading-relaxed tracking-wide md:text-base"
+        className="about-p"
         initial={{ opacity: 0, translateY: 25 }}
         whileInView={{ opacity: 1, translateY: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
         viewport={{ once: true }}
       >
-        graduated in 2025, with a bachelor&apos;s degree in Computer Science
+        Computer Science graduate (2025) and full-stack developer focused on building clean,
+        responsive user interfaces and reliable back-end systems using modern web technologies.
       </motion.p>
       <motion.p
-        className="relative pl-2 before:desc-before text-sm leading-relaxed tracking-wide md:text-base"
+        className="about-p"
         initial={{ opacity: 0, translateY: 25 }}
         whileInView={{ opacity: 1, translateY: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
         viewport={{ once: true }}
       >
-        I&apos;m a full-stack developer who focuses on building clean interfaces and solid back-end
-        architecture. I care about quality, clarity, and continuous learning, and I&apos;m currently
-        building projects to grow my experience and contribute to impactful work.
+        Currently building production-ready projects with React, Next.js, and Node.js, with emphasis
+        on code quality, scalability, and maintainability.
       </motion.p>
+      <motion.p
+        className="about-p"
+        initial={{ opacity: 0, translateY: 25 }}
+        whileInView={{ opacity: 1, translateY: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
+        Actively seeking junior or internship opportunities in frontend or full-stack development.
+      </motion.p>
+      {/* <div>
+        <h4 className="text-xl font-medium">Skills</h4>
+        <ul>
+          <li className="list-disc">HTML5</li>
+        </ul>
+      </div> */}
     </div>
   );
 }

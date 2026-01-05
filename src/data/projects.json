@@ -3,7 +3,7 @@
     {
       "name": "EDUQUEST",
       "slug": "eduquest",
-      "description": "EduQuest is a role-based learning platform with separate teacher and student experiences. It allows teachers to create and manage courses while students can enroll, browse content, and track progress. This was my graduation project, combining real-time data fetching, authentication, and a responsive UI to deliver a seamless educational experience.",
+      "description": "EduQuest is a role-based learning platform with distinct teacher and student experiences. Teachers can create and manage courses, while students enroll, browse content, and track their learning progress.\nI built a responsive React interface with real-time data fetching, authentication, and structured state management to ensure smooth interactions and reliable data flow across roles.",
       "tech": ["React", "TanStack Query", "Tailwind", "Supabase", "Formik", "Recharts"],
       "link": "https://eduquest-d1d.pages.dev",
       "githubLink": "https://github.com/Yosif-Abbas/EDUQUEST",
