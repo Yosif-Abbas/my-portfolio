@@ -1,0 +1,8 @@
+extends baseEmail
+
+block content
+  p Name: #{name}
+  if email
+    p Email: #{email}
+  else 
+  p.bold #{message}

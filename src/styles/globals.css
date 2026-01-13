@@ -1,8 +1,8 @@
 @import 'tailwindcss';
 
 :root {
-  /* --background: #3a1830; */
-  --background: #562446;
+  --background: #3a1830;
+  /* --background: #562446; */
   /* --background: #eeeeee; */
 
   --foreground: #edd4e6;
@@ -50,7 +50,7 @@ body {
     content: '';
     position: absolute;
     left: 0;
-    bottom: 3;
+    bottom: 0;
     width: 100%;
     height: 1px;
     background-color: var(--foreground);
@@ -65,4 +65,59 @@ body {
 
 @utility burger-bar {
   @apply h-[4px] w-8 bg-[var(--foreground)] transition rounded-4xl;
+}
+
+@utility projects-link {
+  @apply text-[#a843cf] hover:text-[var(--foreground)];
+}
+
+@utility about-link {
+  @apply text-[#c5c349] hover:text-[var(--foreground)];
+}
+
+@utility activities-link {
+  @apply text-[#4b3ec4] hover:text-[var(--foreground)];
+}
+
+@utility text-link {
+  @apply text-[#245eaa] cursor-pointer;
+}
+
+@utility page-container {
+  @apply py-8 flex flex-col items-center gap-y-8;
+}
+
+@utility container {
+  @apply rounded-2xl p-4 border-1 border-[#edd4e61e] min-h-75 w-9/10 max-w-[1080px];
+}
+
+@utility container-h2 {
+  @apply text-2xl uppercase tracking-wide font-semibold;
+}
+
+@utility input {
+  @apply border-b-1 w-76 outline-0 text-base p-1;
+}
+
+.spinnerContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 2rem;
+  height: 2rem;
+  z-index: 22;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%, var(--foreground));
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: rotate 1.5s infinite linear;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
 }

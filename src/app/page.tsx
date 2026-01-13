@@ -1,5 +1,10 @@
-import HomePage from '@/components/home/HomePage';
+import Intro from '@/components/intro/Intro';
 
 export default function Home() {
-  return <HomePage />;
+  return (
+    <div className="py-8 flex flex-col items-center">
+      <Intro />
+      
+    </div>
+  );
 }

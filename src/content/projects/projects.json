@@ -1,34 +1,43 @@
 {
   "projects": [
     {
-      "name": "EDUQUEST",
+      "id": "eduquest",
+      "title": "EDUQUEST",
+      "essence": "Graduation Project",
       "slug": "eduquest",
       "description": "EduQuest is a role-based learning platform with distinct teacher and student experiences. Teachers can create and manage courses, while students enroll, browse content, and track their learning progress.\nI built a responsive React interface with real-time data fetching, authentication, and structured state management to ensure smooth interactions and reliable data flow across roles.",
       "tech": ["React", "TanStack Query", "Tailwind", "Supabase", "Formik", "Recharts"],
-      "link": "https://eduquest-d1d.pages.dev",
-      "githubLink": "https://github.com/Yosif-Abbas/EDUQUEST",
-      "logo": "/eduquest.png"
+      "demo": "https://eduquest-d1d.pages.dev",
+      "github": "https://github.com/Yosif-Abbas/EDUQUEST",
+      "logo": "/eduquest.png",
+      "image": "/images/eduquest-home.png"
     },
     {
-      "name": "The Wild Oasis",
+      "id": "the-wild-oasis",
+      "title": "The Wild Oasis",
       "slug": "the-wild-oasis",
       "description": "A modern hotel management dashboard. It allows hotel staff to manage bookings, guests, and cabins efficiently through an intuitive interface. It includes features like authentication, filtering, sorting, and data visualization.",
       "tech": ["React", "TanStack Query", "styled-components", "Supabase"],
-      "link": "https://the-wild-oasis-alpha-lovat.vercel.app",
-      "githubLink": "https://github.com/Yosif-Abbas/the-wild-oasis",
-      "logo": "/the-wild-oasis.png"
+      "demo": "https://the-wild-oasis-alpha-lovat.vercel.app",
+      "github": "https://github.com/Yosif-Abbas/the-wild-oasis",
+      "logo": "/the-wild-oasis.png",
+      "image": "/images/the-wild-oasis-home.png"
     },
     {
-      "name": "The Wild Oasis Website",
+      "id": "the-wild-oasis-website",
+      "title": "The Wild Oasis Website",
       "slug": "the-wild-oasis-website",
       "description": "A modern cabin booking website where guests can explore luxurious cabins, view details, and make online reservations. The site focuses on elegant design, smooth navigation, and a delightful user experience. It features authentication, booking management, and responsive design.",
       "tech": ["Next.js", "Tailwind", "Supabase", "NextAuth", "React Day Picker"],
-      "link": "https://the-wild-oasis-website-seven-nu.vercel.app",
-      "githubLink": "https://github.com/Yosif-Abbas/the-wild-oasis-website",
-      "logo": "/the-wild-oasis-website.png"
+      "demo": "https://the-wild-oasis-website-seven-nu.vercel.app",
+      "github": "https://github.com/Yosif-Abbas/the-wild-oasis-website",
+      "logo": "/the-wild-oasis-website.png",
+      "image": "/images/the-wild-oasis-website-home.png"
     },
     {
-      "name": "Natours",
+      "id": "natours-backend",
+      "title": "Natours",
+      "essence": "Backend",
       "slug": "natours-backend",
       "description": "This API powers a complete tour booking platform, built with a focus on security, reliability, and real-world production standards. It includes user authentication with role-based access, payment handling, and a management system for tours and reviews. The system is protected against common web vulnerabilities. It also provides fully documented endpoints.",
       "tech": [
@@ -44,9 +53,10 @@
         "Joi",
         "Nodemailer"
       ],
-      "githubLink": "https://github.com/Yosif-Abbas/natours-backend",
-      "link": "https://natours-backend-two.vercel.app/api-docs/",
-      "logo": "/natours.png"
+      "demo": "https://natours-backend-two.vercel.app/api-docs/",
+      "github": "https://github.com/Yosif-Abbas/natours-backend",
+      "logo": "/natours.png",
+      "image": "/images/natours-backend-api.png"
     }
   ]
 }

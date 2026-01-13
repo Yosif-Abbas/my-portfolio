@@ -1,5 +1,4 @@
 'use client';
-import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 interface TypingTextProps {
@@ -27,28 +26,9 @@ export default function TypingText({ text, className = '', wpm = 75 }: TypingTex
   }, [text, msPerChar]);
 
   return (
-    <motion.p
-      className={`${className}`}
-      style={{ whiteSpace: 'pre-wrap' }}
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.1 }}
-      viewport={{ once: true }}
-    >
+    <p className={`${className}`} style={{ whiteSpace: 'pre-wrap' }}>
       {displayed}
-      <motion.span
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: [0, 1, 0] }}
-        transition={{
-          repeat: Infinity,
-          duration: 0.8,
-          repeatDelay: 0.5,
-        }}
-        viewport={{ once: true }}
-        className="font-thin select-none"
-      >
-        |
-      </motion.span>
-    </motion.p>
+      <span className="font-thin select-none">|</span>
+    </p>
   );
 }
