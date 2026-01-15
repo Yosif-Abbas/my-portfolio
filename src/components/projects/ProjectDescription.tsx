@@ -1,7 +1,7 @@
 import { Project } from '@/types/project';
 
 export default function ProjectDescription({ project }: { project: Project }) {
-  const projectDescriptions = project.description.split('\n');
+  const projectDescriptions = project.description.split('\\n');
 
   return (
     <div className="flex-1">
