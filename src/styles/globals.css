@@ -64,23 +64,23 @@ body {
 }
 
 @utility burger-bar {
-  @apply h-[4px] w-8 bg-[var(--foreground)] transition rounded-4xl;
+  @apply h-[4px] w-8 bg-(--foreground) transition rounded-4xl;
 }
 
 @utility projects-link {
-  @apply text-[#289b2e] hover:text-[var(--foreground)];
+  @apply text-[#289b2e] hover:text-(--foreground);
 }
 
 @utility about-link {
-  @apply text-[#c5c349] hover:text-[var(--foreground)];
+  @apply text-[#c5c349] hover:text-(--foreground);
 }
 
 @utility activities-link {
-  @apply text-[#4b3ec4] hover:text-[var(--foreground)];
+  @apply text-[#4b3ec4] hover:text-(--foreground);
 }
 
 @utility text-link {
-  @apply text-[#245eaa] cursor-pointer hover:text-[var(--foreground)];
+  @apply text-[#245eaa] cursor-pointer hover:text-(--foreground);
 }
 
 @utility page-container {
@@ -88,7 +88,7 @@ body {
 }
 
 @utility container {
-  @apply rounded-2xl p-4 border-1 border-[#edd4e61e] min-h-75 w-9/10 max-w-[1080px];
+  @apply rounded-2xl px-2 py-4 md:p-4 border border-[#edd4e61e] min-h-75 w-29/30 md:w-9/10 max-w-[1080px];
 }
 
 @utility container-h2 {
