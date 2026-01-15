@@ -9,7 +9,9 @@ export async function getProjects() {
   const { data, error } = await supabase
     .from('projects')
     .select('*')
-    .order('id', { ascending: false });
+    .order('id', { ascending: true });
+
+  console.log(data);
 
   if (error) throw error;
   return data;

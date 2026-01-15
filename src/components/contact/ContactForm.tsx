@@ -72,7 +72,10 @@ export default function ContactForm() {
         />
       </div>
 
-      <button disabled={isLoading} className="border rounded-full w-60 p-2 cursor-pointer text-lg">
+      <button
+        disabled={isLoading}
+        className="border rounded-full w-42 md:w-60 p-2 cursor-pointer md:text-lg"
+      >
         {isLoading ? <Spinner /> : 'Send Message'}
       </button>
     </form>

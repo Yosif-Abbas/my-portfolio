@@ -13,31 +13,37 @@ export default function Intro() {
       <div className="pb-2 md:pb-0 mx-auto">
         <Portrait />
       </div>
-      <div className="text-sm sm:text-base flex flex-col justify-between gap-y-2">
-        <p className="font-light">
-          Hi, I&apos;m Youssef Abbas, I am from El Menia, This is my website, really excited to have
-          my own website 😅, I am a software developer, and I want to share with you some of my{' '}
-          <span>
-            <Link href="/projects" className="projects-link">
-              programming projects
-            </Link>
-          </span>{' '}
-          and I&apos;d like to share some hobbies and{' '}
-          {/* <span>
+      <div className="text-sm sm:text-base flex flex-col justify-between gap-y-2 font-light">
+        <div className="flex flex-col gap-y-3">
+          <p className="">
+            Hi, I&apos;m Youssef Abbas, a software developer from El Menia, This is my personal
+            website where I share my{' '}
+            <span>
+              <Link href="/projects" className="projects-link">
+                programming projects
+              </Link>
+            </span>{' '}
+            along with some of my hobbies and{' '}
+            {/* <span>
             <Link href="/activities" className="activities-link">
-              activities
+            activities
             </Link>
-          </span> */}
-          activities I do.
-          <br />
-          <span>
-            👉{' '}
-            <Link href="/about" className="about-link">
-              Here
-            </Link>
-          </span>
-          , If you want to know more about me.
-        </p>
+            </span> */}
+            activities.
+          </p>
+          <p>
+            On this site you can find books I read, games I play, music I listen to and all other
+            activities that I like to share.
+          </p>
+          <p>
+            <span>
+              <Link href="/about" className="about-link">
+                Here
+              </Link>
+            </span>
+            , If you want to know more about me.
+          </p>
+        </div>
         <div>
           <h2 className="font-medium">You can find me there as well!</h2>
           <SocialLinks />

@@ -96,7 +96,7 @@ body {
 }
 
 @utility input {
-  @apply border-b-1 w-76 outline-0 text-base p-1;
+  @apply border-b w-52 sm:w-60 md:w-76 outline-0 text-base p-1;
 }
 
 .spinnerContainer {

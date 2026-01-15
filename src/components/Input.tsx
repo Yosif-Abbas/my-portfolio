@@ -21,7 +21,7 @@ export default function Input({
 }: Props) {
   return (
     <>
-      <label htmlFor={id} className="text-xl">
+      <label htmlFor={id} className="text-lg md:text-xl">
         {label}
       </label>
       {type === 'textarea' ? (

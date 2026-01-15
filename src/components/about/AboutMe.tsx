@@ -14,7 +14,10 @@ export default function AboutMe() {
           className="my-4"
           fullQuality
         />
-        <div className="font-light text-lg">
+        <div
+          className="font-light text-base leading-relaxed 
+          md:text-lg md:text-left"
+        >
           <p>
             Hi, I&apos;m Youssef, I am from El Menia and a recent computer science graduate from
             Menia university, I am primarily a front-end developer, using React and Next.js to

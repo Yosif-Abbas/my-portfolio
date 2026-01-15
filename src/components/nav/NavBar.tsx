@@ -1,12 +1,13 @@
 'use client';
 
-import Link from 'next/link';
 import { useState } from 'react';
+import Link from 'next/link';
+import { Permanent_Marker } from 'next/font/google';
+import { User } from '@supabase/supabase-js';
+
 import BurgerButton from './BurgerButton';
 import MobileMenu from './MobileMenu';
-import { Permanent_Marker } from 'next/font/google';
 
-import { User } from '@supabase/supabase-js';
 import Logout from '../Logout';
 
 const permanentMarker = Permanent_Marker({
