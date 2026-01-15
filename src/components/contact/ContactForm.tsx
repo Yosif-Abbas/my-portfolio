@@ -5,18 +5,19 @@ import { useState } from 'react';
 import Spinner from '../Spinner';
 import ContactSuccess from './ContactSuccess';
 import ContactError from './ContactError';
+import Input from '../Input';
 
 export default function ContactForm() {
   const [message, setMessage] = useState('');
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [statusCode, setStatusCode] = useState(0);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setStatusCode(0);
-    setLoading(true);
+    setIsLoading(true);
 
     const result = await fetch('/api/send-email', {
       method: 'POST',
@@ -28,7 +29,7 @@ export default function ContactForm() {
     setMessage('');
     setEmail('');
     setName('');
-    setLoading(false);
+    setIsLoading(false);
   }
 
   if (statusCode === 200) return <ContactSuccess name={name} />;
@@ -37,53 +38,42 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col flex-1 gap-8 px-8 items-center">
       <div className="flex flex-col">
-        <label htmlFor="name" className="text-xl">
-          Full Name
-        </label>
-        <input
+        <Input
+          id="name"
+          label="Full Name"
           required
           type="text"
-          id="name"
           value={name}
-          minLength={3}
-          maxLength={30}
-          onChange={(e) => setName(e.target.value)}
-          className="input"
-          disabled={loading}
+          setValue={setName}
+          isLoading={isLoading}
         />
       </div>
 
       <div className="flex flex-col">
-        <label htmlFor="email" className="text-xl">
-          E-mail (Optional)
-        </label>
-        <input
-          type="email"
+        <Input
           id="email"
+          label="E-mail (Optional)"
+          type="email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="input"
-          disabled={loading}
+          setValue={setEmail}
+          isLoading={isLoading}
         />
       </div>
 
       <div className="flex flex-col">
-        <label htmlFor="message" className="text-xl">
-          Message
-        </label>
-        <textarea
+        <Input
           required
           id="message"
+          label="Message"
+          type="textarea"
           value={message}
-          minLength={4}
-          onChange={(e) => setMessage(e.target.value)}
-          className="input"
-          disabled={loading}
+          setValue={setMessage}
+          isLoading={isLoading}
         />
       </div>
 
-      <button disabled={loading} className="border rounded-full w-60 p-2 cursor-pointer text-lg">
-        {loading ? <Spinner /> : 'Send Message'}
+      <button disabled={isLoading} className="border rounded-full w-60 p-2 cursor-pointer text-lg">
+        {isLoading ? <Spinner /> : 'Send Message'}
       </button>
     </form>
   );

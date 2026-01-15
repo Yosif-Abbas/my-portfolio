@@ -6,13 +6,17 @@ import BurgerButton from './BurgerButton';
 import MobileMenu from './MobileMenu';
 import { Permanent_Marker } from 'next/font/google';
 
+import { User } from '@supabase/supabase-js';
+import Logout from '../Logout';
+
 const permanentMarker = Permanent_Marker({
   weight: ['400'],
   subsets: ['latin'],
 });
 
-export default function NavBar() {
+export default function NavBar({ user }: { user: User | null }) {
   const [open, setOpen] = useState(false);
+
   return (
     <header className="fixed top-0 left-0 min-h-16 w-full flex backdrop-blur-xs backdrop-opacity-10099 z-11">
       <MobileMenu open={open} onClose={() => setOpen(false)} />
@@ -55,6 +59,11 @@ export default function NavBar() {
               Contact
             </Link>
           </li>
+          {user?.role === 'authenticated' ? (
+            <li>
+              <Logout />
+            </li>
+          ) : null}
         </ul>
       </nav>
     </header>

@@ -6,14 +6,18 @@ import Link from 'next/link';
 
 import ProjectTitle from './ProjectTitle';
 
-import ProjectImage from './ProjectImage';
+import ImageContainer from '../ImageContainer';
 import ProjectDescription from './ProjectDescription';
 
 function Project({ project }: { project: Project }) {
   return (
     <div className="card w-full">
       <div className="flex flex-col md:flex-row items-start gap-2">
-        <ProjectImage project={project} />
+        <ImageContainer
+          src={project.image}
+          alt={`${project.slug} home page screenshot`}
+          className="md:w-fit"
+        />
         <div className="flex-1 flex flex-col gap-2">
           <ProjectTitle project={project} />
 
@@ -28,7 +32,7 @@ function Project({ project }: { project: Project }) {
             <Link
               href={project.github}
               target="_blank"
-              className="text-xs italic underline md:text-sm hover:no-underline"
+              className="text-xs italic underline font-light md:text-sm hover:no-underline"
             >
               Github Repository
             </Link>

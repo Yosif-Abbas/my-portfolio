@@ -1,8 +1,17 @@
-import { Project } from '@/types/project';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-export default function ProjectImage({ project }: { project: Project }) {
+export default function ImageContainer({
+  src,
+  alt,
+  className,
+  fullQuality = false,
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+  fullQuality?: boolean;
+}) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -25,21 +34,21 @@ export default function ProjectImage({ project }: { project: Project }) {
   }, [isExpanded]);
 
   return (
-    <div className="relative w-full md:w-fit">
+    <div className={`relative w-full ${className}`}>
       <Image
         width={isExpanded ? 1920 : 300}
         height={isExpanded ? 898 : 240}
         quality={100}
-        className={`${imageLoaded ? '' : 'blur-xs'} w-full shadow-md cursor-pointer  ${
+        className={`${imageLoaded ? '' : 'blur-xs'} w-full shadow-md cursor-pointer ${
           isExpanded
             ? 'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[95vw] h-auto max-h-[90vh] object-contain'
             : 'relative'
         }`}
-        src={project.image}
-        alt={`${project.slug} home page screenshot`}
+        src={src}
+        alt={alt}
         onLoad={() => setImageLoaded(true)}
         onClick={() => setIsExpanded(!isExpanded)}
-        sizes={isExpanded ? '95vw' : '(max-width: 768px) 100vw, 300px'}
+        sizes={isExpanded ? '100vw' : fullQuality ? '100vw' : '(max-width: 768px) 100vw, 300px'}
       />
       {isExpanded && (
         <div

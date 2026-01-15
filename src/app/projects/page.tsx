@@ -1,6 +1,5 @@
-import Intro from '@/components/intro/Intro';
 import ProjectsList from '@/components/projects/ProjectsContainer';
-import { getProjects } from '@/lib/content';
+import { getProjects } from '@/lib/actions/projects';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

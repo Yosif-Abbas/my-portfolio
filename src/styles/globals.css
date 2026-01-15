@@ -68,7 +68,7 @@ body {
 }
 
 @utility projects-link {
-  @apply text-[#a843cf] hover:text-[var(--foreground)];
+  @apply text-[#289b2e] hover:text-[var(--foreground)];
 }
 
 @utility about-link {
@@ -80,7 +80,7 @@ body {
 }
 
 @utility text-link {
-  @apply text-[#245eaa] cursor-pointer;
+  @apply text-[#245eaa] cursor-pointer hover:text-[var(--foreground)];
 }
 
 @utility page-container {
@@ -107,8 +107,6 @@ body {
 }
 
 .spinner {
-  width: 2rem;
-  height: 2rem;
   z-index: 22;
   border-radius: 50%;
   background: conic-gradient(#0000 10%, var(--foreground));

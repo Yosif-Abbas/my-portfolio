@@ -15,8 +15,8 @@ export default function Intro() {
       </div>
       <div className="text-sm sm:text-base flex flex-col justify-between gap-y-2">
         <p className="font-light">
-          Hi, I&apos;m Youssef Abbas, This is my website, really excited to have my own website 😅,
-          I am a software developer, and I want to share with you some of my{' '}
+          Hi, I&apos;m Youssef Abbas, I am from El Menia, This is my website, really excited to have
+          my own website 😅, I am a software developer, and I want to share with you some of my{' '}
           <span>
             <Link href="/projects" className="projects-link">
               programming projects

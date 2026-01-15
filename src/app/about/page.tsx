@@ -1,3 +1,5 @@
+import AboutMe from '@/components/about/AboutMe';
+
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -7,9 +9,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <div className="page-container">
-      <div className="container">
-        <h2 className="container-h2">About</h2>
-      </div>
+      <AboutMe />
     </div>
   );
 }
