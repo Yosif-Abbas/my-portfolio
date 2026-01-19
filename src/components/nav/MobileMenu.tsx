@@ -14,13 +14,19 @@ export default function MobileMenu({ open, onClose }: Props) {
     >
       <ul className="flex flex-col divide-y divide-[#eeeeee10]">
         
+      <li className="hover:bg-[#10101010] text-lg flex">
+          <Link href="/books" onClick={onClose} className="flex-1 p-3">
+            Books
+          </Link>
+        </li>
+
         <li className="hover:bg-[#10101010] text-lg flex">
-          <Link href="/projects" onClick={onClose} className="flex-grow p-3">
+          <Link href="/projects" onClick={onClose} className="flex-1 p-3">
             Projects
           </Link>
         </li>
         <li className="hover:bg-[#10101010] text-lg flex">
-          <Link href="/about" onClick={onClose} className="flex-grow p-3">
+          <Link href="/about" onClick={onClose} className="flex-1 p-3">
             About
           </Link>
         </li>
@@ -36,7 +42,7 @@ export default function MobileMenu({ open, onClose }: Props) {
           </Link>
         </li> */}
         <li className="hover:bg-[#10101010] text-lg flex">
-          <Link href="/contact" onClick={onClose} className="flex-grow p-3">
+          <Link href="/contact" onClick={onClose} className="flex-1 p-3">
             Contact
           </Link>
         </li>

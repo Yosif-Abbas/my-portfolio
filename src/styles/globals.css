@@ -79,6 +79,10 @@ body {
   @apply text-[#4b3ec4] hover:text-(--foreground);
 }
 
+@utility books-link {
+  @apply text-[#917575] cursor-pointer hover:text-(--foreground);
+}
+
 @utility text-link {
   @apply text-[#245eaa] cursor-pointer hover:text-(--foreground);
 }
@@ -92,7 +96,7 @@ body {
 }
 
 @utility container-h2 {
-  @apply text-2xl uppercase tracking-wide font-semibold;
+  @apply text-2xl md:text-3xl uppercase tracking-wide font-semibold;
 }
 
 @utility input {

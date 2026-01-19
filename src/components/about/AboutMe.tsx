@@ -2,6 +2,7 @@
 
 import ImageContainer from '@/components/ImageContainer';
 import Link from 'next/link';
+import AutoLinkText from '../AutoLinkText';
 
 export default function AboutMe() {
   return (
@@ -77,15 +78,17 @@ export default function AboutMe() {
           </p>
           <br />
           <br />
+
+
+
+          
           <p>
-            I used to spend a lot of time playing video games such as League of Legends, Valorant,
-            and Apex Legends. In 2025, I decided to quit and shift my focus toward more meaningful
-            habits, particularly reading. That decision helped me save a significant amount of time.
+            <AutoLinkText text="I used to spend a lot of time playing video games such as League of Legends, Valorant,
+              and Apex Legends. In 2025, I decided to quit and shift my focus toward more meaningful
+              habits, particularly reading. That decision helped me save a significant amount of time." />
           </p>
           <p>
-            I enjoy listening to music across a wide range of genres. My favorites include lo-fi
-            hip-hop, instrumental classical music, and classic Arabic music. My favorite singer is
-            Umm Kulthum.
+          <AutoLinkText text="  I enjoy listening to music across a wide range of genres. My favorites include lo-fi hip-hop, instrumental classical music, and classic Arabic music. My favorite singer is Umm Kulthum." />
           </p>
         </div>
       </div>

@@ -11,8 +11,6 @@ export async function getProjects() {
     .select('*')
     .order('id', { ascending: true });
 
-  console.log(data);
-
   if (error) throw error;
   return data;
 }

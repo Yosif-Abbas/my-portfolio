@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   images: {
     qualities: [75, 100],
+    remotePatterns: [new URL('https://assets.hardcover.app/**')],
   },
 };
 

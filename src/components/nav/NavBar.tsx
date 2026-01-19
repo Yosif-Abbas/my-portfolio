@@ -34,7 +34,15 @@ export default function NavBar({ user }: { user: User | null }) {
         <BurgerButton open={open} onClick={() => setOpen(!open)} />
 
         {/* big screen */}
+
         <ul className="hidden justify-end gap-x-2 text-lg w-full sm:flex">
+        
+        <li>
+            <Link href="/books" className="link-before">
+              Books
+            </Link>
+          </li>
+          
           <li className="">
             <Link href="/projects" className="link-before">
               Projects
@@ -56,7 +64,7 @@ export default function NavBar({ user }: { user: User | null }) {
             </Link>
           </li> */}
           <li>
-            <Link href="contact" className="link-before">
+            <Link href="/contact" className="link-before">
               Contact
             </Link>
           </li>
