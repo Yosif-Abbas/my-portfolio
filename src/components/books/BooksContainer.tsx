@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { getBooks } from '@/lib/hardcover/books';
 
 import BooksShelf from '@/components/books/BooksShelf';
-import CurrentlyReading from '@/components/books/CurrentlyReading';
 import HardcoverIcon from '@/components/books/HardcoverIcon';
 
 export default async function BooksContainer() {
