@@ -15,7 +15,7 @@ export default function BookCard({ book }: { book: IBook }) {
   return (
     <div className="flex-1 px-1 py-2 bg-black/10 ">
       <div className="flex items-center text-sm sm:text-lg  ">
-        <div className="flex gap-1 ">
+        <div className="flex gap-1">
           <div className="self-center">
             {book.finishedAt ? (
               <FiBook color="#8f7c7c" size={20} />
@@ -23,7 +23,7 @@ export default function BookCard({ book }: { book: IBook }) {
               <FiBookOpen color="#8f7c7c" size={20} />
             )}
           </div>
-          <div className=" flex flex-col md:flex-row">
+          <div className=" flex flex-col md:flex-row gap-x-1">
             <h4 className="text-[#8f7c7c] text-nowrap">{book.title}</h4>
             <p>
               <span>By: </span>
