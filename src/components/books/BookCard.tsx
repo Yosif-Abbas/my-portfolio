@@ -23,15 +23,17 @@ export default function BookCard({ book }: { book: IBook }) {
               <FiBookOpen color="#8f7c7c" size={20} />
             )}
           </div>
-          <h4 className="text-[#8f7c7c] text-nowrap">{book.title}</h4>
-          <p>
-            <span>By: </span>
-            {book.authors?.join(', ')}
+          <div className=" flex flex-col md:flex-row">
+            <h4 className="text-[#8f7c7c] text-nowrap">{book.title}</h4>
+            <p>
+              <span>By: </span>
+              {book.authors?.join(', ')}
 
-            <span className="text-xs opacity-80">
-              {book.translators[0] ? ` (Translator ${book.translators?.join(', ')})` : ''}
-            </span>
-          </p>
+              <span className="text-xs opacity-80">
+                {book.translators[0] ? ` (Translator ${book.translators?.join(', ')})` : ''}
+              </span>
+            </p>
+          </div>
         </div>
         {book.finishedAt ? (
           <div className="ml-auto flex flex-col md:flex-row items-center md:divide-x divide-[#edd4e62e]">
