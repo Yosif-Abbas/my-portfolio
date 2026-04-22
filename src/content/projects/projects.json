@@ -1,6 +1,26 @@
 {
   "projects": [
     {
+      "id": "phoisac-blog",
+      "title": "Phoisac Eldali",
+      "essence": "Personal Blog",
+      "slug": "phoisac-blog",
+      "description": "Phoisac blog is an Arabic (rtl) personal blog, made for the writer Phoisac, It is a content management system (CMS), where the admin (writer) can manage his writings using block-based editor (Editor.js).\nWhile creating a post the admin use a block-based editor, with multiple block types (Header, Text, Poem, Quote, Image).",
+      "tech": [
+        "Next.js",
+        "TanStack Query",
+        "Tailwind",
+        "Supabase",
+        "Editor.js",
+        "TypeScript",
+        "Vercel"
+      ],
+      "demo": "https://www.phoisac.online/",
+      "github": "https://github.com/Yosif-Abbas/phoisac-blog",
+      "logo": "/phoisac.png",
+      "image": "/images/phoisac-home.png"
+    },
+    {
       "id": "eduquest",
       "title": "EDUQUEST",
       "essence": "Graduation Project",

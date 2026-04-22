@@ -22,7 +22,13 @@ export default function ProjectTitle({ project }: { project: Project }) {
           <>{project.title}</>
         )}
         {project.logo ? (
-          <Image width={20} height={20} src={project.logo} alt={project.title} />
+          <Image
+            width={20}
+            height={20}
+            src={project.logo}
+            alt={project.title}
+            className="text-[6px]"
+          />
         ) : (
           ''
         )}

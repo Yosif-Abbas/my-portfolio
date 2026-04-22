@@ -12,11 +12,11 @@ import ProjectDescription from './ProjectDescription';
 function Project({ project }: { project: Project }) {
   return (
     <div className="card w-full">
-      <div className="flex flex-col md:flex-row items-start gap-2">
+      <div className="flex flex-col md:flex-row items-start gap-2 text-xs">
         <ImageContainer
           src={project.image}
           alt={`${project.slug} home page screenshot`}
-          className="md:w-fit"
+          className="md:w-fit min-w-64"
         />
         <div className="flex-1 flex flex-col gap-2">
           <ProjectTitle project={project} />
@@ -29,13 +29,15 @@ function Project({ project }: { project: Project }) {
           </div>
 
           {project.github && (
-            <Link
-              href={project.github}
-              target="_blank"
-              className="text-xs italic underline font-light md:text-sm hover:no-underline"
-            >
-              Github Repository
-            </Link>
+            <div>
+              <Link
+                href={project.github}
+                target="_blank"
+                className="text-xs italic underline font-light md:text-sm hover:no-underline"
+              >
+                Github Repository
+              </Link>
+            </div>
           )}
         </div>
       </div>
