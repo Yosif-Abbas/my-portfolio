@@ -6,26 +6,46 @@ import BooksShelf from '@/components/books/BooksShelf';
 import HardcoverIcon from '@/components/books/HardcoverIcon';
 
 export default async function BooksContainer() {
-  const finished2025 = await getBooks({ year: 2025 });
-  const finished2026 = await getBooks({ year: 2026 });
-  const currentlyReading = await getBooks({ status: 'currently_reading' });
+  const currentlyReadingPromise = getBooks({ status: 'currently_reading' });
+
+  const currentYear = new Date().getFullYear();
+  const startYear = 2002;
+
+  const years = Array.from(
+    { length: currentYear - startYear + 1 },
+    (_, index) => currentYear - index,
+  );
+
+  const yearlyBooksPromises = years.map(async (year) => {
+    const books = await getBooks({ year });
+    return { year, books };
+  });
+
+  const [currentlyReading, ...yearlyBooksData] = await Promise.all([
+    currentlyReadingPromise,
+    ...yearlyBooksPromises,
+  ]);
 
   return (
     <div className="container">
-        <div className='flex '>
-
+      <div className="flex ">
         <h2 className="container-h2">Books</h2>
-        <Link href='https://hardcover.app/join?referrer_id=65864' target='_blank' className='flex items-end gap-x-1'>
-          <HardcoverIcon/>
+        <Link
+          href="https://hardcover.app/join?referrer_id=65864"
+          target="_blank"
+          className="flex items-end gap-x-1"
+        >
+          <HardcoverIcon />
         </Link>
-        </div>
-        <div className="flex flex-col gap-y-1">
-
-          <BooksShelf books={currentlyReading} />
-          <BooksShelf year={2026} books={finished2026} />
-          <BooksShelf year={2025} books={finished2025} />
-
-        </div>
       </div>
-  )
+      <div className="flex flex-col gap-y-1">
+        {currentlyReading && currentlyReading.length > 0 && <BooksShelf books={currentlyReading} />}
+        {yearlyBooksData.map(({ year, books }) => {
+          if (!books || books.length === 0) return null;
+
+          return <BooksShelf key={year} year={year} books={books} />;
+        })}
+      </div>
+    </div>
+  );
 }

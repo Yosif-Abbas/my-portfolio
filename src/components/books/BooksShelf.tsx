@@ -12,7 +12,7 @@ export default function BooksShelf({ books, year }: { books: IBook[]; year?: num
               <p className="text-xs opacity-80">({books.length} Books Read)</p>
             </>
           ) : (
-            <h3 className="font-medium text-xl">Currenty Reading</h3>
+            <h3 className="font-medium text-xl">Currently Reading</h3>
           )}
         </div>
       </div>

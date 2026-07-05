@@ -12,61 +12,56 @@ export default function BookCard({ book }: { book: IBook }) {
 
   const formattedReadDate = `${day}-${month}-${year}`;
 
+  const authors = book.authors?.join(', ');
+
+  const translators =
+    book.translators && book.translators.length > 0 && book.translators.join(', ');
+
   return (
-    <div className="flex-1 px-1 py-2 bg-black/10 ">
-      <div className="flex items-center text-sm sm:text-lg  ">
-        <div className="flex gap-1">
-          <div className="self-center">
+    <div className="flex-1 px-2 py-3 bg-black/10 hover:bg-black/20 transition-colors duration-200">
+      <div className="flex items-center text-sm sm:text-base">
+        {/* FIX 1: Replaced w-full with flex-1 and added min-w-0 */}
+        <div className="flex gap-3 items-start sm:items-center flex-1 min-w-0">
+          <div className="shrink-0 mt-1 sm:mt-0">
             {book.finishedAt ? (
               <FiBook color="#8f7c7c" size={20} />
             ) : (
               <FiBookOpen color="#8f7c7c" size={20} />
             )}
           </div>
-          <div className=" flex flex-col md:flex-row gap-x-1">
-            <h4 className="text-[#8f7c7c] text-nowrap">{book.title}</h4>
-            <p>
-              <span>By: </span>
-              {book.authors?.join(', ')}
 
-              <span className="text-xs opacity-80">
-                {book.translators[0] ? ` (Translator ${book.translators?.join(', ')})` : ''}
-              </span>
+          {/* FIX 2: Replaced w-full with flex-1 and added min-w-0 */}
+          <div className="flex flex-col sm:flex-row gap-x-2 flex-1 min-w-0 ">
+            {/* FIX 3: Removed hardcoded max-w-50/75. Let flexbox handle the truncation dynamically! */}
+            <h4
+              className="text-[#8f7c7c] font-medium truncate sm:overflow-visible sm:whitespace-nowrap"
+              title={book.title}
+            >
+              {book.title}
+            </h4>
+
+            <p className=" text-gray-400 truncate">
+              <span className="opacity-70">By: </span>
+              {authors}
+              {translators && (
+                <span className="text-xs opacity-60 ml-1">(Trans. {translators})</span>
+              )}
             </p>
           </div>
         </div>
-        {book.finishedAt ? (
-          <div className="ml-auto flex flex-col md:flex-row items-center md:divide-x divide-[#edd4e62e]">
-            <p className="text-xs pr-1 text-nowrap">
-              <span>Read At </span>
+
+        {book.finishedAt && (
+          <div className="ml-auto flex flex-col items-end sm:flex-row sm:items-center sm:divide-x divide-[#edd4e62e] shrink-0 pl-2">
+            <p className="text-xs sm:pr-3 text-gray-400 whitespace-nowrap">
+              <span className="hidden sm:inline opacity-70">Read: </span>
               {formattedReadDate}
             </p>
-            <div className="pl-1">{book.rating ? <StarRating value={book.rating} /> : ''}</div>
+            <div className="sm:pl-3 mt-1 sm:mt-0">
+              {book.rating ? <StarRating value={book.rating} /> : null}
+            </div>
           </div>
-        ) : (
-          ''
         )}
       </div>
     </div>
   );
 }
-
-// {book.cover ? (
-//   <Image
-//     src={book.cover}
-//     alt={book.title}
-//     width={300}
-//     height={450}
-//     quality={100}
-//     priority
-//     style={{
-//       width: '75px',
-//       height: 'auto',
-//     }}
-//     className="rounded-xs"
-//   />
-// ) : (
-//   <div className="h-[120px] w-[75px] flex items-center justify-center">
-//     <FiBook size={50} />
-//   </div>
-// )}
