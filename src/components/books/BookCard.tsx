@@ -14,6 +14,8 @@ export default function BookCard({ book }: { book: IBook }) {
 
   const authors = book.authors?.join(', ');
 
+  console.log(book);
+
   const translators =
     book.translators && book.translators.length > 0 && book.translators.join(', ');
 

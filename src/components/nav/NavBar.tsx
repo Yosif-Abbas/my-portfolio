@@ -3,19 +3,16 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Permanent_Marker } from 'next/font/google';
-import { User } from '@supabase/supabase-js';
 
 import BurgerButton from './BurgerButton';
 import MobileMenu from './MobileMenu';
-
-import Logout from '../Logout';
 
 const permanentMarker = Permanent_Marker({
   weight: ['400'],
   subsets: ['latin'],
 });
 
-export default function NavBar({ user }: { user: User | null }) {
+export default function NavBar() {
   const [open, setOpen] = useState(false);
 
   return (
@@ -36,13 +33,12 @@ export default function NavBar({ user }: { user: User | null }) {
         {/* big screen */}
 
         <ul className="hidden justify-end gap-x-2 text-lg w-full sm:flex">
-        
-        <li>
+          <li>
             <Link href="/books" className="link-before">
               Books
             </Link>
           </li>
-          
+
           <li className="">
             <Link href="/projects" className="link-before">
               Projects
@@ -68,11 +64,6 @@ export default function NavBar({ user }: { user: User | null }) {
               Contact
             </Link>
           </li>
-          {user?.role === 'authenticated' ? (
-            <li>
-              <Logout />
-            </li>
-          ) : null}
         </ul>
       </nav>
     </header>

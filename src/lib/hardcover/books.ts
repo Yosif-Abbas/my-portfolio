@@ -71,7 +71,9 @@ export function cleanBooks(rawData: RawData): IBook[] {
     const contributions = edition.contributions ?? [];
     const read = ub.user_book_reads?.[0] ?? {};
 
-    const authors = contributions.filter((c) => c.contribution === null).map((c) => c.author.name);
+    const authors = contributions
+      .filter((c) => c.contribution === 'Author')
+      .map((c) => c.author.name);
 
     const translators = contributions
       .filter((c) => c.contribution === 'Translator')

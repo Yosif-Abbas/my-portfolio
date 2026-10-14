@@ -9,7 +9,7 @@ export default async function BooksContainer() {
   const currentlyReadingPromise = getBooks({ status: 'currently_reading' });
 
   const currentYear = new Date().getFullYear();
-  const startYear = 2002;
+  const startYear = 2024;
 
   const years = Array.from(
     { length: currentYear - startYear + 1 },
